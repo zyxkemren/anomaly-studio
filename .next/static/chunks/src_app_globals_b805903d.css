@@ -207,6 +207,10 @@
     pointer-events: none;
   }
 
+  .visible {
+    visibility: visible;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -249,6 +253,10 @@
 
   .mb-\[20px\] {
     margin-bottom: 20px;
+  }
+
+  .block {
+    display: block;
   }
 
   .flex {

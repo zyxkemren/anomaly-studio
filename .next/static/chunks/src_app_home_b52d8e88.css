@@ -119,4 +119,25 @@ a {
   cursor: url("/cursor.png"), auto;
 }
 
+.content-page {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 10vh;
+}
+
+.boutus-page {
+  scroll-snap-align: center;
+}
+
+.boutus-container, .project {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  transition-delay: .2s;
+}
+
+.boutus-container.visible, .project.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=src_app_home_b52d8e88.css.map*/

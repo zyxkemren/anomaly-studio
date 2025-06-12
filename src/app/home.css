@@ -117,3 +117,25 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   cursor: url("/cursor.png"), auto;
 }
+
+.content-page {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 10vh;
+}
+
+.boutus-page {
+  scroll-snap-align: center;
+}
+
+.boutus-container, .project {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  transition-delay: 0.2s;
+}
+
+.boutus-container.visible, .project.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+

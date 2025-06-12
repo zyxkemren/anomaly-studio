@@ -1,0 +1,61 @@
+/* [project]/src/app/home.css [app-client] (css) */
+:root {
+  --background: radial-gradient(circle 100vw at top left, #3b4752, #202931), #202931;
+}
+
+body {
+  cursor: url("/v2/boutus.png") 16 16, auto;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: right;
+  background: none;
+}
+
+.navbar ul {
+  display: flex;
+  right: 0;
+  gap: 50px;
+  margin: 8vh 20vw 0 0;
+}
+
+.navbar li {
+  color: #e3e9ef;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 1px;
+}
+
+.main-page {
+  margin: 10vh 0 0;
+}
+
+.bg-main {
+  object-fit: cover;
+}
+
+.title {
+  padding: 20vh 0 0 10vw;
+  width: 25vw;
+}
+
+.boutus-page {
+  background: linear-gradient(#070707, #222, #343434);
+  padding: 0 0 20vh;
+}
+
+.boutus-container {
+  margin: 0 20vw;
+}
+
+.boutus-container p {
+  margin: 5vh 0;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=src_app_home_b52d8e88.css.map*/

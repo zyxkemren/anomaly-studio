@@ -6,7 +6,6 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --color-red-900: oklch(39.6% .141 25.723);
     --color-white: #fff;
     --spacing: .25rem;
     --font-weight-bold: 700;
@@ -243,28 +242,12 @@
     margin-block: 10vw;
   }
 
-  .mt-\[10vh\] {
-    margin-top: 10vh;
-  }
-
-  .mt-\[20px\] {
-    margin-top: 20px;
-  }
-
-  .mt-\[30vh\] {
-    margin-top: 30vh;
-  }
-
-  .mt-auto {
-    margin-top: auto;
+  .mt-\[120px\] {
+    margin-top: 120px;
   }
 
   .mb-\[20px\] {
     margin-bottom: 20px;
-  }
-
-  .mb-\[20vh\] {
-    margin-bottom: 20vh;
   }
 
   .flex {
@@ -335,8 +318,16 @@
     align-items: center;
   }
 
+  .items-start {
+    align-items: flex-start;
+  }
+
   .justify-center {
     justify-content: center;
+  }
+
+  .justify-start {
+    justify-content: flex-start;
   }
 
   .gap-\[10vw\] {
@@ -375,10 +366,6 @@
     background-color: #1e1e29;
   }
 
-  .bg-red-900 {
-    background-color: var(--color-red-900);
-  }
-
   .bg-white\/80 {
     background-color: #fffc;
   }
@@ -399,6 +386,10 @@
 
   .py-\[2vw\] {
     padding-block: 2vw;
+  }
+
+  .pb-\[20px\] {
+    padding-bottom: 20px;
   }
 
   .text-center {
@@ -494,6 +485,7 @@ body {
   background: var(--background);
   font-family: Poppins, sans-serif;
   margin: 0;
+  cursor: url("/bot.png"), auto;
 }
 
 .navbar {

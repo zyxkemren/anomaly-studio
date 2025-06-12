@@ -1,9 +1,5 @@
 :root {
-  --background: radial-gradient(circle 100vw at top left, #3b4752, #202931), #202931;
-}
-
-body {
-  cursor: url(/v2/boutus.png) 16 16, auto;
+  --background: radial-gradient(circle 60vw at top left, #3b4752, #202931), #202931;
 }
 
 .navbar {
@@ -43,16 +39,68 @@ body {
   width: 25vw;
 }
 
-.boutus-page {
-  background: linear-gradient(to bottom, #070707, #222222, #343434);
-  padding: 0 0 20vh;
+.content-page {
+  background: linear-gradient(to bottom, #070707 5%, #24262a, #38534d, #3e594a, #355c69);
 }
 
 .boutus-container {
   margin: 0 20vw;
+  padding: 30vh 0;
 }
 
 .boutus-container p {
-  margin: 5vh 0;
+  margin: 10vh 0 20vh;
   text-align: justify;
+}
+
+.project-container {
+  margin: 0 10vw;
+}
+
+.project {
+  margin: 10vh 0;
+  position: relative;
+  display: flex;
+  gap: 2vw;
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project > :first-child {
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 40%;
+}
+
+.project > :last-child {
+  position: relative;
+  width: 60%;
+}
+
+.project img {
+  border-radius: 10px;
+}
+
+.project h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.project p {
+  margin: 20px 0 40px;
+  align-items: ;
+}
+
+.btn-v2 {
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-v2:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }

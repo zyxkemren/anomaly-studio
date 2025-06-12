@@ -45,21 +45,22 @@ const links = [
 
 export default function Home() {
   return (
-      <div className="overflow-x-hidden">
-        <div className="navbar">
-          <ul>
-            <li>about us</li>
-            <li>project</li>
-            <li>discord</li>
-          </ul>
-        </div>
-        <div className="main-page relative h-screen w-full">
-          <Image src="/v2/background-anomaly-1.png" alt="Background" fill className="bg-main" quality={100} />
-          <Image src="/v2/text-anomaly-studio.png" alt="Anomaly Studio" width={400} height={100} className="title" quality={100} />
-        </div>
+    <div className="overflow-x-hidden whole-page">
+      <div className="navbar">
+        <ul>
+          <li>About Us</li>
+          <li>Project</li>
+          <li>Discord</li>
+        </ul>
+      </div>
+      <div className="main-page relative h-screen w-full">
+        <Image src="/v2/background-anomaly-1.png" alt="Background" fill className="bg-main" quality={100} />
+        <Image src="/v2/text-anomaly-studio.png" alt="Anomaly Studio" width={400} height={100} className="title" quality={100} />
+      </div>
+      <div className="content-page">
         <div className="boutus-page w-full">
           <div className="boutus-container flex flex-col justify-center items-center">
-            <Image src="/v2/boutus.png" alt="About Us" width={250} height={100} quality={100} className="mt-[30vh]" />
+            <Image src="/v2/boutus.png" alt="About Us" width={250} height={100} quality={100} className="boutus-img"/>
             <p>
               Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
               pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
@@ -68,11 +69,30 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <footer className="text-center mt-auto mb-[20px]">
+        <div className="project-page w-full">
+          <div className="project-container flex flex-col justify-center items-start">
+            {project.map((data, index) => (
+              <div className={`project ${(index + 1) % 2 ? "" : "reverse"}`} key={index}>
+                <div>
+                  <Image src={data.image} alt="Image" fill quality={100} />
+                </div>
+                <div>
+                  <h3>{data.title}</h3>
+                  <p>{data.desc}</p>
+                  <button onClick={() => (window.location.href = data.button.link)} className="btn-v2">
+                    {data.button.text}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <footer className="text-center mt-[120px] pb-[20px]">
           <a href="https://dsc.gg/anomalystudio" className="text-[0.8rem]">
             ©2025 Anomaly Studio. All rights reserved.
           </a>
         </footer>
       </div>
+    </div>
   );
 }

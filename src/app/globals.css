@@ -11,6 +11,7 @@ body {
   background: var(--background);
   font-family: "Poppins", sans-serif;
   margin: 0;
+  cursor: url('/bot.png'), auto;
 }
 
 .navbar {

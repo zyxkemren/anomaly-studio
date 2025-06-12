@@ -2,6 +2,10 @@
   --background: radial-gradient(circle 60vw at top left, #3b4752, #202931), #202931;
 }
 
+body {
+  cursor: url("/cursor.png"), auto;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -24,6 +28,16 @@
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1;
+  transition: all 0.3s ease;
+}
+
+.navbar li:hover {
+  transform: scale(0.98);
+  opacity: 40%;
+}
+
+a {
+  cursor: url("/cursor.png"), auto;
 }
 
 .main-page {
@@ -90,17 +104,16 @@
 
 .project p {
   margin: 20px 0 40px;
-  align-items: ;
 }
 
 .btn-v2 {
   padding: 10px 30px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn-v2:hover {
   background-color: rgba(255, 255, 255, 0.3);
+  cursor: url("/cursor.png"), auto;
 }

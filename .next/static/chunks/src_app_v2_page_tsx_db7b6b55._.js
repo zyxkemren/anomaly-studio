@@ -9,7 +9,10 @@ __turbopack_context__.s({
     "default": (()=>Home)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -20,6 +23,20 @@ const image = [
     "/anomatot.webp",
     "/chatbot.png",
     "/bot.png"
+];
+const nav = [
+    {
+        t: "About Us",
+        u: "/#about-us"
+    },
+    {
+        t: "Project",
+        u: "/#project"
+    },
+    {
+        t: "Discord",
+        u: "https://dsc.gg/anomalystudio/"
+    }
 ];
 const project = [
     {
@@ -59,62 +76,49 @@ const project = [
         }
     }
 ];
-const links = [
-    {
-        icon: "/icons/discord.png",
-        link: "https://dsc.gg/anomalystudio"
-    },
-    {
-        icon: "/icons/instagram.png",
-        link: "https://instagram.com/zyxkemren"
-    },
-    {
-        icon: "/icons/tiktok.png",
-        link: "https://tiktok.com/@zyxkemren"
-    },
-    {
-        icon: "/icons/youtube.png",
-        link: "https://youtube.com/@zyxkemren"
-    }
-];
 function Home() {
+    _s();
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "Home.useEffect": ()=>{
+            const imgs = document.querySelectorAll("img");
+            imgs.forEach({
+                "Home.useEffect": (img)=>{
+                    img.setAttribute("draggable", "false");
+                    img.addEventListener("dragstart", {
+                        "Home.useEffect": (e)=>e.preventDefault()
+                    }["Home.useEffect"]);
+                }
+            }["Home.useEffect"]);
+        }
+    }["Home.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "overflow-x-hidden whole-page",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "navbar",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "About Us"
-                        }, void 0, false, {
+                    children: nav.map((data, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: data.u,
+                                children: data.t
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/v2/page.tsx",
+                                lineNumber: 60,
+                                columnNumber: 17
+                            }, this)
+                        }, index, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 51,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Project"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 52,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                            children: "Discord"
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 53,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
+                            lineNumber: 59,
+                            columnNumber: 15
+                        }, this))
+                }, void 0, false, {
                     fileName: "[project]/src/app/v2/page.tsx",
-                    lineNumber: 50,
-                    columnNumber: 9
+                    lineNumber: 57,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 49,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -128,7 +132,7 @@ function Home() {
                         quality: 100
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 57,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -140,13 +144,13 @@ function Home() {
                         quality: 100
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 58,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 56,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -166,25 +170,25 @@ function Home() {
                                     className: "boutus-img"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 62,
+                            lineNumber: 71,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 61,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -202,12 +206,12 @@ function Home() {
                                                 quality: 100
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/v2/page.tsx",
-                                                lineNumber: 77,
+                                                lineNumber: 86,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/v2/page.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -216,14 +220,14 @@ function Home() {
                                                     children: data.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 89,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: data.desc
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 81,
+                                                    lineNumber: 90,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -232,29 +236,29 @@ function Home() {
                                                     children: data.button.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 91,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/v2/page.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 88,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 84,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 73,
+                            lineNumber: 82,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 72,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -265,27 +269,28 @@ function Home() {
                             children: "©2025 Anomaly Studio. All rights reserved."
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 91,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 90,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 60,
+                lineNumber: 69,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/v2/page.tsx",
-        lineNumber: 48,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
+_s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");

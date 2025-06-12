@@ -1,10 +1,16 @@
 "use client";
 
-import CustomCursor from "@/components/CustomCursor";
+import { useEffect } from "react";
 import Image from "next/image";
 import "../home.css";
 
 const image = ["/image.png", "/dashboard.png", "/anomatot.webp", "/chatbot.png", "/bot.png"];
+
+const nav = [
+  { t: "About Us", u: "/#about-us" },
+  { t: "Project", u: "/#project" },
+  { t: "Discord", u: "https://dsc.gg/anomalystudio/" },
+];
 
 const project = [
   {
@@ -36,22 +42,25 @@ const project = [
   },
 ];
 
-const links = [
-  { icon: "/icons/discord.png", link: "https://dsc.gg/anomalystudio" },
-  { icon: "/icons/instagram.png", link: "https://instagram.com/zyxkemren" },
-  { icon: "/icons/tiktok.png", link: "https://tiktok.com/@zyxkemren" },
-  { icon: "/icons/youtube.png", link: "https://youtube.com/@zyxkemren" },
-];
-
 export default function Home() {
+  useEffect(() => {
+    const imgs = document.querySelectorAll("img");
+    imgs.forEach((img) => {
+      img.setAttribute("draggable", "false");
+      img.addEventListener("dragstart", (e) => e.preventDefault());
+    });
+  }, []);
+
   return (
     <div className="overflow-x-hidden whole-page">
       <div className="navbar">
-        <ul>
-          <li>About Us</li>
-          <li>Project</li>
-          <li>Discord</li>
-        </ul>
+          <ul>
+            {nav.map((data, index) => (
+              <li key={index}>
+                <a href={data.u}>{data.t}</a>
+              </li>
+            ))}
+          </ul>
       </div>
       <div className="main-page relative h-screen w-full">
         <Image src="/v2/background-anomaly-1.png" alt="Background" fill className="bg-main" quality={100} />
@@ -60,7 +69,7 @@ export default function Home() {
       <div className="content-page">
         <div className="boutus-page w-full">
           <div className="boutus-container flex flex-col justify-center items-center">
-            <Image src="/v2/boutus.png" alt="About Us" width={250} height={100} quality={100} className="boutus-img"/>
+            <Image src="/v2/boutus.png" alt="About Us" width={250} height={100} quality={100} className="boutus-img" />
             <p>
               Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
               pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.

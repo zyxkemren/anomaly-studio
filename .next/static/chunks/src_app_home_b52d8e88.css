@@ -3,6 +3,10 @@
   --background: radial-gradient(circle 60vw at top left, #3b4752, #202931), #202931;
 }
 
+body {
+  cursor: url("/cursor.png"), auto;
+}
+
 .navbar {
   position: absolute;
   top: 0;
@@ -25,6 +29,16 @@
   font-weight: 400;
   font-family: Poppins, sans-serif;
   letter-spacing: 1px;
+  transition: all .3s;
+}
+
+.navbar li:hover {
+  transform: scale(.98);
+  opacity: .4;
+}
+
+a {
+  cursor: url("/cursor.png"), auto;
 }
 
 .main-page {
@@ -91,19 +105,18 @@
 
 .project p {
   margin: 20px 0 40px;
-  align-items: ;
 }
 
 .btn-v2 {
   padding: 10px 30px;
   background-color: #fff3;
   border-radius: 15px;
-  cursor: pointer;
   transition: background-color .3s;
 }
 
 .btn-v2:hover {
   background-color: #ffffff4d;
+  cursor: url("/cursor.png"), auto;
 }
 
 /*# sourceMappingURL=src_app_home_b52d8e88.css.map*/

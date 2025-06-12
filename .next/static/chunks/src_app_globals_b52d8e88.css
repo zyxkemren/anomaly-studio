@@ -326,10 +326,6 @@
     justify-content: center;
   }
 
-  .justify-start {
-    justify-content: flex-start;
-  }
-
   .gap-\[10vw\] {
     gap: 10vw;
   }
@@ -485,13 +481,15 @@ body {
   background: var(--background);
   font-family: Poppins, sans-serif;
   margin: 0;
-  cursor: url("/bot.png"), auto;
 }
 
-.navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
 }
 
 .nav-links {

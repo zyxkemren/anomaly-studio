@@ -39,43 +39,6 @@ export default function Home() {
   const [aboutRef, aboutVisible] = useInView();
 
   useEffect(() => {
-    let currentScroll = 0; // Posisi scroll saat ini
-    let targetScroll = 0; // Target posisi scroll
-    let ticking = false; // Supaya tidak ada animasi ganda
-
-    const easeInOutQuad = (t: any) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t); // Fungsi easing
-
-    const smoothScroll = () => {
-      currentScroll += (targetScroll - currentScroll) * 0.1;
-      window.scrollTo(0, currentScroll);
-
-      if (Math.abs(targetScroll - currentScroll) > 0.5) {
-        requestAnimationFrame(smoothScroll);
-      } else {
-        ticking = false;
-      }
-    };
-
-    const onScroll = (e: any) => {
-      e.preventDefault(); // Stop scroll default
-      targetScroll += e.deltaY; // Tambah target scroll
-
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(smoothScroll); // Mulai animasi
-      }
-    };
-
-    // Aktifkan custom scroll listener
-    window.addEventListener("wheel", onScroll, { passive: false });
-
-    // Bersihkan event listener saat komponen di-unmount
-    return () => {
-      window.removeEventListener("wheel", onScroll);
-    };
-  }, []); // Jalankan sekali saat komponen di-mount
-
-  useEffect(() => {
     const imgs = document.querySelectorAll("img");
     imgs.forEach((img) => {
       img.setAttribute("draggable", "false");
@@ -115,7 +78,7 @@ export default function Home() {
         </ul>
       </div>
       <div className="main-page relative h-screen w-full">
-        <Image src="/v2/background-anomaly-1.png" alt="Background" fill className="bg-main" quality={100} />
+        <Image src="/v2/background-anomaly-1.png" alt="Background" sizes="1928px" fill className="bg-main" quality={100} />
         <Image src="/v2/text-anomaly-studio.png" alt="Anomaly Studio" width={400} height={100} className="title" quality={100} />
       </div>
       <div className="content-page">

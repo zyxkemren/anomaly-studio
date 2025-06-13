@@ -103,37 +103,6 @@ const project = [
 function Home() {
     const [aboutRef, aboutVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$useInView$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        let currentScroll = 0; // Posisi scroll saat ini
-        let targetScroll = 0; // Target posisi scroll
-        let ticking = false; // Supaya tidak ada animasi ganda
-        const easeInOutQuad = (t)=>t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // Fungsi easing
-        const smoothScroll = ()=>{
-            currentScroll += (targetScroll - currentScroll) * 0.1;
-            window.scrollTo(0, currentScroll);
-            if (Math.abs(targetScroll - currentScroll) > 0.5) {
-                requestAnimationFrame(smoothScroll);
-            } else {
-                ticking = false;
-            }
-        };
-        const onScroll = (e)=>{
-            e.preventDefault(); // Stop scroll default
-            targetScroll += e.deltaY; // Tambah target scroll
-            if (!ticking) {
-                ticking = true;
-                requestAnimationFrame(smoothScroll); // Mulai animasi
-            }
-        };
-        // Aktifkan custom scroll listener
-        window.addEventListener("wheel", onScroll, {
-            passive: false
-        });
-        // Bersihkan event listener saat komponen di-unmount
-        return ()=>{
-            window.removeEventListener("wheel", onScroll);
-        };
-    }, []); // Jalankan sekali saat komponen di-mount
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const imgs = document.querySelectorAll("img");
         imgs.forEach((img)=>{
             img.setAttribute("draggable", "false");
@@ -160,12 +129,12 @@ function Home() {
                                 children: "About Us"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/v2/page.tsx",
-                                lineNumber: 91,
+                                lineNumber: 54,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 90,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -180,12 +149,12 @@ function Home() {
                                 children: "Project"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/v2/page.tsx",
-                                lineNumber: 102,
+                                lineNumber: 65,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 64,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -194,23 +163,23 @@ function Home() {
                                 children: "Discord"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/v2/page.tsx",
-                                lineNumber: 113,
+                                lineNumber: 76,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 112,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/v2/page.tsx",
-                    lineNumber: 89,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 88,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -224,7 +193,7 @@ function Home() {
                         quality: 100
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 118,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -236,13 +205,13 @@ function Home() {
                         quality: 100
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 119,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 117,
+                lineNumber: 80,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -264,25 +233,25 @@ function Home() {
                                     className: "boutus-img"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 88,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 123,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -304,12 +273,12 @@ function Home() {
                                                 quality: 100
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/v2/page.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 104,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/v2/page.tsx",
-                                            lineNumber: 140,
+                                            lineNumber: 103,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -318,14 +287,14 @@ function Home() {
                                                     children: data.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 107,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: data.desc
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 145,
+                                                    lineNumber: 108,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -334,30 +303,30 @@ function Home() {
                                                     children: data.button.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/v2/page.tsx",
-                                                    lineNumber: 146,
+                                                    lineNumber: 109,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/v2/page.tsx",
-                                            lineNumber: 143,
+                                            lineNumber: 106,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/src/app/v2/page.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 102,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 134,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 133,
+                        lineNumber: 96,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -368,24 +337,24 @@ function Home() {
                             children: "©2025 Anomaly Studio. All rights reserved."
                         }, void 0, false, {
                             fileName: "[project]/src/app/v2/page.tsx",
-                            lineNumber: 156,
+                            lineNumber: 119,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/v2/page.tsx",
-                        lineNumber: 155,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/v2/page.tsx",
-                lineNumber: 121,
+                lineNumber: 84,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/v2/page.tsx",
-        lineNumber: 87,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }

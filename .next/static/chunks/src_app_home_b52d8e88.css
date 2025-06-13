@@ -5,6 +5,7 @@
 
 body {
   cursor: url("/cursor.png"), auto;
+  transition: all .3s;
 }
 
 .navbar {
@@ -47,6 +48,7 @@ a {
 
 .bg-main {
   object-fit: cover;
+  object-position: right;
 }
 
 .title {
@@ -86,16 +88,17 @@ a {
 .project > :first-child {
   position: relative;
   aspect-ratio: 16 / 9;
-  width: 40%;
+  width: 50%;
 }
 
 .project > :last-child {
   position: relative;
-  width: 60%;
+  width: 50%;
 }
 
 .project img {
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .project h3 {
@@ -138,6 +141,64 @@ a {
 .boutus-container.visible, .project.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (width <= 1520px) {
+  .title {
+    width: 30vw;
+  }
+}
+
+@media (width <= 1024px) {
+  .title {
+    padding: 15vh 0 0 10vw;
+    width: 40vw;
+  }
+}
+
+@media (width <= 928px) {
+  .bg-main {
+    object-position: 85% center;
+  }
+
+  .project-container {
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+  }
+
+  .project > :first-child {
+    width: 80%;
+  }
+
+  .project > :last-child {
+    width: 100%;
+  }
+}
+
+@media (width <= 724px) {
+  .title {
+    padding: 20vh 0 0 10vw;
+    width: 50vw;
+  }
+}
+
+@media (width <= 512px) {
+  .project > :first-child {
+    width: 100%;
+  }
+
+  .title {
+    padding: 20vh 0 0 10vw;
+    width: 60vw;
+  }
 }
 
 /*# sourceMappingURL=src_app_home_b52d8e88.css.map*/

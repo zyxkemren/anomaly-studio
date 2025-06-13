@@ -4,6 +4,7 @@
 
 body {
   cursor: url("/cursor.png"), auto;
+  transition: all 0.3s ease;
 }
 
 .navbar {
@@ -46,6 +47,7 @@ a {
 
 .bg-main {
   object-fit: cover;
+  object-position: right;
 }
 
 .title {
@@ -85,16 +87,17 @@ a {
 .project > :first-child {
   position: relative;
   aspect-ratio: 16/9;
-  width: 40%;
+  width: 50%;
 }
 
 .project > :last-child {
   position: relative;
-  width: 60%;
+  width: 50%;
 }
 
 .project img {
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .project h3 {
@@ -127,15 +130,70 @@ a {
   scroll-snap-align: center;
 }
 
-.boutus-container, .project {
+.boutus-container,
+.project {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-out;
   transition-delay: 0.2s;
 }
 
-.boutus-container.visible, .project.visible{
+.boutus-container.visible,
+.project.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+@media (max-width: 1520px) {
+  .title {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    padding: 15vh 0 0 10vw;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 928px) {
+  .bg-main {
+    object-position: 85% center;
+  }
+  .project-container {
+    margin: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .project {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .project > :first-child {
+    width: 80%;
+  }
+
+  .project > :last-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 724px) {
+  .title {
+    padding: 20vh 0 0 10vw;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 512px) {
+  .project > :first-child {
+    width: 100%;
+  }
+  .title {
+    padding: 20vh 0 0 10vw;
+    width: 60vw;
+  }
+}

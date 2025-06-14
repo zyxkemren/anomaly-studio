@@ -67,7 +67,7 @@ a {
 
 .boutus-container p {
   margin: 10vh 0 20vh;
-  text-align: justify;
+  text-align: center;
 }
 
 .project-container {
@@ -149,18 +149,7 @@ a {
   }
 }
 
-@media (width <= 1024px) {
-  .title {
-    padding: 15vh 0 0 10vw;
-    width: 40vw;
-  }
-}
-
-@media (width <= 928px) {
-  .bg-main {
-    object-position: 85% center;
-  }
-
+@media (width <= 1168px) {
   .project-container {
     margin: 0 5vw;
     justify-content: center;
@@ -180,6 +169,23 @@ a {
 
   .project > :last-child {
     width: 100%;
+  }
+}
+
+@media (width <= 1024px) {
+  .title {
+    padding: 15vh 0 0 10vw;
+    width: 40vw;
+  }
+
+  .boutus-container {
+    margin: 0 10vw;
+  }
+}
+
+@media (width <= 928px) {
+  .bg-main {
+    object-position: 85% center;
   }
 }
 

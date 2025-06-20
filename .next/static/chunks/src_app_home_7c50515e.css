@@ -207,5 +207,9 @@ a {
   }
 }
 
+.material-symbols-outlined {
+  background: url("/v2/menu.svg");
+}
+
 
 /*# sourceMappingURL=src_app_home_7c50515e.css.map*/

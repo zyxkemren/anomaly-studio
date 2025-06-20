@@ -203,3 +203,7 @@ a {
     width: 60vw;
   }
 }
+
+.material-symbols-outlined {
+  background: url('/v2/menu.svg');
+}
